@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiyeArt — Premium Resin Art Gallery</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo-link">
+        <img src="assets/logo.jpg" alt="BiyeArt Logo" class="brand-logo">
+      </a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="18.36" x2="5.64" y2="16.92"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Dynamic 3D Fluid Resin Video Background Carousel -->
+  <section id="home" class="hero-section">
+    <!-- Animated 3D Resin Video Carousel Background (Self-Contained Local Assets) -->
+    <div class="hero-video-carousel" aria-hidden="true">
+      <video class="hero-bg-video active" autoplay muted loop playsinline preload="auto" src="assets/hero_bg_resin_01.mp4"></video>
+      <video class="hero-bg-video" muted loop playsinline preload="auto" src="assets/hero_bg_resin_02.mp4"></video>
+      <video class="hero-bg-video" muted loop playsinline preload="auto" src="assets/hero_bg_resin_03.mp4"></video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <div class="hero-container">
+      <!-- Invisible Glassmorphism Text Card (Retaining Position, Size & Style) -->
+      <div class="hero-glass-card">
+        <div class="hero-text-content">
+          <div class="hero-badge-wrap">
+            <span class="hero-badge">✨ Bespoke Resin Atelier</span>
+          </div>
+          <h1 class="hero-headline">Transforming Resin into <span class="gold-gradient-text">An Ultimate Masterpiece</span></h1>
+          <p class="hero-subtitle">
+            Handcrafted with care and precision - crafting optical-clarity crystal resin, 24k metallic foils, and organic mica minerals into bespoke functional decor, writing instruments, and wearable masterpieces.
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="hero-actions">
+            <a href="#catalog" class="cta-button primary-hero-btn">
+              <span>Explore Catalog</span>
+              <svg class="cta-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="https://wa.me/+2348087188966?text=Hi%20Biye%20Art%2C%20I%20would%20like%20to%20inquire%20about%20a%20custom%20resin%20commission." class="secondary-cta-button" target="_blank" rel="noopener noreferrer">
+              <svg class="btn-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 2c-5.514 0-9.997 4.483-9.997 9.997 0 1.76.459 3.474 1.33 4.988l-1.364 4.985 5.105-1.339c1.464.799 3.118 1.22 4.926 1.22 5.514 0 9.997-4.483 9.997-9.997 0-5.514-4.483-9.997-9.997-9.997zm5.834 14.161c-.244.688-1.428 1.314-1.97 1.368-.492.049-1.129.227-3.666-.82-3.155-1.303-5.17-4.526-5.328-4.737-.156-.21-1.282-1.706-1.282-3.253 0-1.547.812-2.309 1.101-2.62.29-.311.631-.389.842-.389.21 0 .421.002.604.011.196.01.458-.074.717.548.267.639.914 2.228.993 2.388.079.16.132.347.026.558-.105.21-.157.341-.315.525-.158.184-.332.411-.474.552-.158.158-.323.33-.139.646.184.316.817 1.349 1.753 2.183 1.203 1.072 2.217 1.405 2.533 1.563.316.158.5.132.684-.079.184-.21.789-.92 1.001-1.235.21-.316.421-.263.71-.158.29.105 1.841.868 2.157 1.026.316.158.526.237.605.368.079.132.079.763-.165 1.451z"/>
+              </svg>
+              <span>Custom Commission</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Category Navigation Strip -->
+    <div class="hero-category-nav">
+      <span class="cat-nav-title">Quick Explore:</span>
+      <div class="cat-nav-chips">
+        <button class="hero-cat-chip" data-target="pens-jotters">
+          <span class="chip-icon">✒️</span>
+          <span>Pens & Jotters</span>
+        </button>
+        <button class="hero-cat-chip" data-target="phone-pouches">
+          <span class="chip-icon">📱</span>
+          <span>Phone Pouches & Stands</span>
+        </button>
+        <button class="hero-cat-chip" data-target="jewelry-wearables">
+          <span class="chip-icon">💎</span>
+          <span>Jewelry & Keychains</span>
+        </button>
+        <button class="hero-cat-chip" data-target="combo-sets">
+          <span class="chip-icon">🎁</span>
+          <span>Combo Gift Sets</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (Option A: Centered Editorial Luxury Manifesto) -->
+  <section id="about" class="about-section">
+    <div class="about-manifesto-card">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-title">Crafting Fluid Elegance</h2>
+      <div class="manifesto-ornament" aria-hidden="true">
+        <span class="ornament-line"></span>
+        <span class="ornament-diamond">✦</span>
+        <span class="ornament-line"></span>
+      </div>
+      <p class="about-manifesto-text">
+        Founded by Precious Adesiyan in Nigeria, BiyeArt transforms raw, unpredictable elements into timeless pieces of luxury. We believe art should be a striking, tactile experience that elevates the energy of any space. Every piece in our collection is meticulously handcrafted using high-grade epoxy and premium pigments, ensuring no two creations are ever exactly alike. By carefully manipulating the curing process, we capture the organic movement of liquid—suspending vibrant colors and dynamic textures in a state of permanent perfection. Defined by patience and precision, our ultimate goal is to deliver uncompromising quality and breathtaking design to every client.
+      </p>
+      <div class="manifesto-attribution">
+        <span class="founder-name">Precious Adesiyan</span>
+        <span class="founder-title">Founder &amp; Lead Artisan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reference Catalog Section -->
+  <section id="catalog" class="catalog-section">
+    <div class="catalog-header">
+      <span class="section-label">Curated Portfolio</span>
+      <h2 class="section-title">Reference Catalog</h2>
+      <p class="catalog-subtitle">Explore handcrafted resin art categorized by item type. Multi-item custom sets are listed across all applicable sections.</p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="category-filter-bar">
+      <button class="category-tab active" data-filter="all">
+        <span class="tab-label">All Collections</span>
+        <span class="tab-badge">14</span>
+      </button>
+      <button class="category-tab" data-filter="pens-jotters">
+        <span class="tab-label">Pens & Jotters</span>
+        <span class="tab-badge">3</span>
+      </button>
+      <button class="category-tab" data-filter="phone-pouches">
+        <span class="tab-label">Phone Pouches & Stands</span>
+        <span class="tab-badge">4</span>
+      </button>
+      <button class="category-tab" data-filter="jewelry-wearables">
+        <span class="tab-label">Jewelry & Keychains</span>
+        <span class="tab-badge">4</span>
+      </button>
+      <button class="category-tab" data-filter="combo-sets">
+        <span class="tab-label">Combo Gift Sets</span>
+        <span class="tab-badge">3</span>
+      </button>
+    </div>
+
+    <div class="catalog-gallery-container">
+      
+      <!-- ==================== SECTION 1: PENS & JOTTERS ==================== -->
+      <div class="category-group-block" data-category-group="pens-jotters">
+        <div class="category-group-header">
+          <div class="category-header-title-wrap">
+            <span class="category-pill-num">01</span>
+            <h3 class="category-group-title">Pens & Jotters</h3>
+          </div>
+          <p class="category-group-desc">Handcrafted crystal resin pens with gold mica accents, custom refillable writing tools, and metallic foil spiral jotters.</p>
+        </div>
+
+        <div class="masonry-grid">
+          <!-- 1. Pen_01.jpg -->
+          <div class="gallery-card image-card" data-categories="pens-jotters">
+            <div class="card-badge-container">
+              <span class="card-badge">Pen & Jotter</span>
+            </div>
+            <img src="assets/Pen_01.jpg" alt="Custom Gold Leaf Resin Pens" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Custom Gold Leaf Resin Pens</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Pen_02.mp4 -->
+          <div class="gallery-card video-card" data-categories="pens-jotters">
+            <div class="card-badge-container">
+              <span class="card-badge">Pen & Jotter</span>
+            </div>
+            <video loop muted playsinline preload="metadata" src="assets/Pen_02.mp4#t=0.001" class="gallery-media"></video>
+            <div class="video-play-hint">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="card-caption-bar">
+              <span class="card-item-title">Metallic Shimmer Resin Pen</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Pen_05.jpeg [MULTI-CATEGORY] -->
+          <div class="gallery-card image-card multi-category-card" data-categories="pens-jotters phone-pouches combo-sets">
+            <div class="card-badge-container">
+              <span class="card-badge">Pen & Jotter</span>
+              <span class="card-badge alt">Phone Pouch</span>
+              <span class="card-badge combo">Gift Box</span>
+            </div>
+            <img src="assets/Pen_05.jpeg" alt="Resin Jotter, Pen & Phone Pouch Gift Box" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Personalized Jotter, Pen & Pouch Set</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 2: PHONE POUCHES & STANDS ==================== -->
+      <div class="category-group-block" data-category-group="phone-pouches">
+        <div class="category-group-header">
+          <div class="category-header-title-wrap">
+            <span class="category-pill-num">02</span>
+            <h3 class="category-group-title">Phone Pouches & Stand Holders</h3>
+          </div>
+          <p class="category-group-desc">Custom resin phone pouches, crystal-clear mobile display stands, and desktop media holders sculpted with metallic foils.</p>
+        </div>
+
+        <div class="masonry-grid">
+          <!-- 8. phone_01.jpg -->
+          <div class="gallery-card image-card" data-categories="phone-pouches">
+            <div class="card-badge-container">
+              <span class="card-badge alt">Phone Pouch</span>
+            </div>
+            <img src="assets/phone_01.jpg" alt="Crystal Blue Glitter Phone Stand" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Crystal Blue Glitter Phone Stand</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 9. phone_02.jpg -->
+          <div class="gallery-card image-card" data-categories="phone-pouches">
+            <div class="card-badge-container">
+              <span class="card-badge alt">Phone Pouch</span>
+            </div>
+            <img src="assets/phone_02.jpg" alt="Translucent Gold-Flecked Phone Holder" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Translucent Gold-Flecked Phone Holder</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 10. phone_03.jpeg [MULTI-CATEGORY] -->
+          <div class="gallery-card image-card multi-category-card" data-categories="pens-jotters phone-pouches combo-sets">
+            <div class="card-badge-container">
+              <span class="card-badge alt">Phone Pouch</span>
+              <span class="card-badge">Pen & Jotter</span>
+              <span class="card-badge combo">Gift Box</span>
+            </div>
+            <img src="assets/phone_03.jpeg" alt="Bespoke Phone Pouch & Pen/Jotter Gift Set" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Custom Phone Pouch & Writing Set</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 11. phone_04.mp4 -->
+          <div class="gallery-card video-card" data-categories="phone-pouches">
+            <div class="card-badge-container">
+              <span class="card-badge alt">Phone Pouch</span>
+            </div>
+            <video loop muted playsinline preload="metadata" src="assets/phone_04.mp4#t=0.001" class="gallery-media"></video>
+            <div class="video-play-hint">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="card-caption-bar">
+              <span class="card-item-title">High-Clarity Custom Resin Phone Stand</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 3: JEWELRY & KEYCHAINS ==================== -->
+      <div class="category-group-block" data-category-group="jewelry-wearables">
+        <div class="category-group-header">
+          <div class="category-header-title-wrap">
+            <span class="category-pill-num">03</span>
+            <h3 class="category-group-title">Jewelry & Keychains</h3>
+          </div>
+          <p class="category-group-desc">Hand-poured resin rings, wrist bangles, gold-foil heart pendants, and personalized initial keytags.</p>
+        </div>
+
+        <div class="masonry-grid">
+          <!-- 14. Ring_01.jpg -->
+          <div class="gallery-card image-card" data-categories="jewelry-wearables">
+            <div class="card-badge-container">
+              <span class="card-badge jewel">Jewelry</span>
+            </div>
+            <img src="assets/Ring_01.jpg" alt="Glitter Resin Rings" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Glitter Resin Rings</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 15. Ring_02.jpg -->
+          <div class="gallery-card image-card" data-categories="jewelry-wearables">
+            <div class="card-badge-container">
+              <span class="card-badge jewel">Jewelry</span>
+            </div>
+            <img src="assets/Ring_02.jpg" alt="Vibrant Resin Rings & Bangles" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Vibrant Resin Rings & Bangles</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 16. neck_01.jpg -->
+          <div class="gallery-card image-card" data-categories="jewelry-wearables">
+            <div class="card-badge-container">
+              <span class="card-badge jewel">Jewelry</span>
+            </div>
+            <img src="assets/neck_01.jpg" alt="Interlocking Heart Pendant Necklace" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Interlocking Couple Heart Necklace</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 18. key_01.mp4 -->
+          <div class="gallery-card video-card" data-categories="jewelry-wearables">
+            <div class="card-badge-container">
+              <span class="card-badge jewel">Keychain</span>
+            </div>
+            <video loop muted playsinline preload="metadata" src="assets/key_01.mp4#t=0.001" class="gallery-media"></video>
+            <div class="video-play-hint">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="card-caption-bar">
+              <span class="card-item-title">Monogrammed Resin Initial Keytag</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 4: COMBO GIFT SETS & SPECIAL PROJECTS ==================== -->
+      <div class="category-group-block" data-category-group="combo-sets">
+        <div class="category-group-header">
+          <div class="category-header-title-wrap">
+            <span class="category-pill-num">04</span>
+            <h3 class="category-group-title">Combo Gift Sets & Bespoke Projects</h3>
+          </div>
+          <p class="category-group-desc">Multi-piece presentation gift boxes pairing matching stationery and phone accessories, plus custom wall art & signage.</p>
+        </div>
+
+        <div class="masonry-grid">
+          <!-- 26. Pen_05.jpeg [MULTI-CATEGORY] -->
+          <div class="gallery-card image-card multi-category-card" data-categories="pens-jotters phone-pouches combo-sets">
+            <div class="card-badge-container">
+              <span class="card-badge combo">Gift Box</span>
+              <span class="card-badge">Pen & Jotter</span>
+              <span class="card-badge alt">Phone Pouch</span>
+            </div>
+            <img src="assets/Pen_05.jpeg" alt="Resin Jotter, Pen & Phone Pouch Gift Box" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Personalized Jotter, Pen & Pouch Set</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 27. phone_03.jpeg [MULTI-CATEGORY] -->
+          <div class="gallery-card image-card multi-category-card" data-categories="pens-jotters phone-pouches combo-sets">
+            <div class="card-badge-container">
+              <span class="card-badge combo">Gift Box</span>
+              <span class="card-badge alt">Phone Pouch</span>
+              <span class="card-badge">Pen & Jotter</span>
+            </div>
+            <img src="assets/phone_03.jpeg" alt="Bespoke Phone Pouch & Pen/Jotter Gift Set" loading="lazy" decoding="async" class="gallery-media">
+            <div class="card-caption-bar">
+              <span class="card-item-title">Custom Phone Pouch & Writing Set</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 28. signage.mp4 -->
+          <div class="gallery-card video-card" data-categories="combo-sets">
+            <div class="card-badge-container">
+              <span class="card-badge combo">Special Project</span>
+            </div>
+            <video loop muted playsinline preload="metadata" src="assets/signage.mp4#t=0.001" class="gallery-media"></video>
+            <div class="video-play-hint">
+              <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="card-caption-bar">
+              <span class="card-item-title">Bespoke Resin Wall Signage & Crest</span>
+            </div>
+            <div class="rating-overlay">
+              <button class="rating-btn thumbs-btn" aria-label="Like piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+              </button>
+              <button class="rating-btn heart-btn" aria-label="Favorite piece">
+                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Media Spotlight Modal (Images & Videos stand out when clicked) -->
+  <div id="media-spotlight-modal" class="spotlight-modal">
+    <div id="spotlight-backdrop" class="spotlight-backdrop"></div>
+    <div class="spotlight-content">
+      <button id="spotlight-close" class="spotlight-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <img id="spotlight-image" class="spotlight-media-element spotlight-img" src="" alt="BiyeArt Gallery Spotlight">
+      <video id="spotlight-video" controls autoplay playsinline class="spotlight-media-element spotlight-vid"></video>
+    </div>
+  </div>
+
+  <!-- Workshops Section -->
+  <section id="workshops" class="workshops-section">
+    <div class="workshops-header">
+      <span class="section-label">Masterclass & Training</span>
+      <h2 class="section-title">Creative Workshops</h2>
+      <p class="workshops-subtitle">Unlock your artistic potential with our hands-on and virtual resin art training sessions.</p>
+    </div>
+
+    <div class="workshops-container">
+      <!-- Column 1: Online Masterclass -->
+      <div class="workshop-card">
+        <div class="workshop-card-top">
+          <div class="workshop-tag">Online Session</div>
+          <h3 class="workshop-card-title">Online Masterclass</h3>
+          <p class="workshop-desc">Master the art of fluid resin crafting at your own pace from anywhere in the world. Comprehensive video modules covering safety protocols, color gradients, metallic pigment suspension, and flawless finishing techniques.</p>
+          
+          <ul class="workshop-highlights">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Step-by-step HD video lessons</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Complete resin materials & vendor starter guide</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Direct tutor feedback & dedicated Q&A support</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="workshop-card-bottom">
+          <a href="https://wa.me/+2348087188966?text=Hi%20BiyeArt%2C%20I%20would%20like%20to%20enrol%20for%20the%20online%20Resin%20Art%20Masterclass.%20My%20name%20is%20.........." class="workshop-btn" target="_blank" rel="noopener noreferrer">
+            <span>Reserve a seat</span>
+            <svg class="workshop-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Physical Studio Workshop -->
+      <div class="workshop-card">
+        <div class="workshop-card-top">
+          <div class="workshop-tag">Studio Experience</div>
+          <h3 class="workshop-card-title">Physical Studio Workshop</h3>
+          <p class="workshop-desc">Immerse yourself in an intimate, hands-on workshop at our art studio. Experience personalized 1-on-1 mentorship, work with premium crystal resins and pigments, and craft your own bespoke masterpiece.</p>
+
+          <ul class="workshop-highlights">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>All premium resins, tools & safety gear provided</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Live demonstrations & personalized hands-on guidance</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Take home your completed resin art masterpiece</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="workshop-card-bottom">
+          <a href="https://wa.me/+2348087188966?text=Hi%20BiyeArt%2C%20I%20would%20like%20to%20enrol%20for%20the%20physical%20Resin%20Art%20Masterclass%2C%20My%20name%20is%20........" class="workshop-btn" target="_blank" rel="noopener noreferrer">
+            <span>Reserve a seat</span>
+            <svg class="workshop-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 3: Corporate Training -->
+      <div class="workshop-card">
+        <div class="workshop-card-top">
+          <div class="workshop-tag">Corporate & Groups</div>
+          <h3 class="workshop-card-title">Corporate Training</h3>
+          <p class="workshop-desc">Book BiyeArt for bespoke hands-on training sessions and empowerment programs tailored for institutions, corporate organizations, schools, religious bodies, and vocational centers.</p>
+
+          <ul class="workshop-highlights">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Customized practical curricula for teams & groups</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>On-site or venue-based group skill acquisition</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>All training materials & mentorship provided</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="workshop-card-bottom">
+          <a href="https://wa.me/+2348087188966?text=Hi%2C%20Biye%20Art%0AThis%20is%20%5BCompany%2FOrganization%20name%5D%2C%20we%20want%20to%20schedule%20a%20corporate%20training%20session%20with%20you." class="workshop-btn" target="_blank" rel="noopener noreferrer">
+            <span>Book a slot</span>
+            <svg class="workshop-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-header">
+      <h2 class="contact-main-title">Get In Touch</h2>
+      <p class="contact-main-subtitle">Have a question, need a quote, or want to discuss your next project?<br>Our team is ready to help you find the perfect resin art solution.</p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Send Us a Message Card -->
+      <div class="contact-card message-card">
+        <h3 class="contact-card-title">Send Us a Message</h3>
+        <p class="contact-card-sub">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms Access Key (Replace YOUR_WEB3FORMS_ACCESS_KEY with your key from web3forms.com) -->
+          <input type="hidden" name="access_key" value="013a67fc-3d99-4e67-935d-584d5917bcd5">
+          <input type="hidden" name="from_name" value="BiyeArt Website Inquiry">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <div class="form-group">
+            <label for="full-name">FULL NAME</label>
+            <input type="text" id="full-name" name="name" placeholder="John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email-address">EMAIL ADDRESS</label>
+            <input type="email" id="email-address" name="email" placeholder="johndoe@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone-number">PHONE NUMBER</label>
+            <input type="tel" id="phone-number" name="phone" placeholder="+234 XXX XXX XXXX">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">SUBJECT</label>
+            <input type="text" id="subject" name="subject" placeholder="How can we help?">
+          </div>
+
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us more about your inquiry..." required></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="submit-btn">
+            <svg class="btn-send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span id="btn-text">Send Message</span>
+          </button>
+
+          <!-- Web3Forms Status Feedback Message -->
+          <div id="form-status" class="form-status-msg"></div>
+        </form>
+      </div>
+
+      <!-- Contact Information Card -->
+      <div class="contact-card info-card">
+        <h3 class="contact-card-title">Contact Information</h3>
+        <p class="contact-card-sub">Reach out through any of these channels — we're always happy to connect.</p>
+
+        <div class="info-items-list">
+          <!-- Email Us -->
+          <div class="info-item">
+            <div class="info-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="info-content">
+              <span class="info-label">Email Us</span>
+              <a href="mailto:biyeart001@gmail.com" class="info-value-link">biyeart001@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Call Us -->
+          <div class="info-item">
+            <div class="info-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="info-content">
+              <span class="info-label">Call Us</span>
+              <a href="tel:+2348087188966" class="info-value-link">+2348087188966</a>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="info-item">
+            <div class="info-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="info-content">
+              <span class="info-label">Business Hours</span>
+              <p class="info-value-text">Mon – Fri: 8:00 AM – 6:00 PM<br>Saturday: 9:00 AM – 3:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Follow Us -->
+          <div class="info-item follow-us-item">
+            <div class="info-icon-box social-head-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <div class="info-content">
+              <span class="info-label">Follow Us</span>
+              <div class="social-icons-row">
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@biyelilies_art" class="contact-social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.89 2.896 2.896 0 0 1-2.892-2.89 2.896 2.896 0 0 1 2.892-2.891c.328 0 .641.055.932.157V9.435a6.317 6.317 0 0 0-.932-.07 6.335 6.335 0 0 0-6.334 6.334 6.335 6.335 0 0 0 6.334 6.334 6.335 6.335 0 0 0 6.334-6.334V8.406a8.214 8.214 0 0 0 4.772 1.523V6.484a4.847 4.847 0 0 1-1.002.202z"/>
+                  </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/biyelilies_art" class="contact-social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                  <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-grid-container">
+      <!-- Left Column: Brand & Logo -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand-header">
+          <img src="assets/logo.jpg" alt="BiyeArt Logo" class="footer-brand-logo">
+          <h3 class="footer-brand-name">BiyeArt</h3>
+        </div>
+        <p class="footer-brand-desc">Handcrafted Resin Artworks & Bespoke Fluid Creations — Transforming Resin Into An Ultimate Masterpiece.</p>
+        <div class="footer-social-row">
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@biyelilies_art" class="social-icon-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.89 2.896 2.896 0 0 1-2.892-2.89 2.896 2.896 0 0 1 2.892-2.891c.328 0 .641.055.932.157V9.435a6.317 6.317 0 0 0-.932-.07 6.335 6.335 0 0 0-6.334 6.334 6.335 6.335 0 0 0 6.334 6.334 6.335 6.335 0 0 0 6.334-6.334V8.406a8.214 8.214 0 0 0 4.772 1.523V6.484a4.847 4.847 0 0 1-1.002.202z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/biyelilies_art" class="social-icon-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#catalog">Catalogue</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Products Column -->
+      <div class="footer-col products-col">
+        <h4 class="footer-heading">Products</h4>
+        <ul class="footer-links-list">
+          <li><a href="#catalog" class="footer-cat-link" data-target-filter="all">All Collections</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-target-filter="pens-jotters">Pens & Jotters</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-target-filter="phone-pouches">Phone Pouches & Stands</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-target-filter="jewelry-wearables">Jewelry & Keychains</a></li>
+          <li><a href="#catalog" class="footer-cat-link" data-target-filter="combo-sets">Combo Gift Sets</a></li>
+        </ul>
+      </div>
+
+      <!-- WhatsApp / Connect Column (Replaces Support) -->
+      <div class="footer-col whatsapp-col">
+        <h4 class="footer-heading">Instant Order</h4>
+        <p class="footer-col-text">Have a custom design in mind? Chat directly with us on WhatsApp for fast response and instant orders.</p>
+        <a href="https://wa.me/+2348087188966" class="whatsapp-btn inline-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2c-5.514 0-9.997 4.483-9.997 9.997 0 1.76.459 3.474 1.33 4.988l-1.364 4.985 5.105-1.339c1.464.799 3.118 1.22 4.926 1.22 5.514 0 9.997-4.483 9.997-9.997 0-5.514-4.483-9.997-9.997-9.997zm5.834 14.161c-.244.688-1.428 1.314-1.97 1.368-.492.049-1.129.227-3.666-.82-3.155-1.303-5.17-4.526-5.328-4.737-.156-.21-1.282-1.706-1.282-3.253 0-1.547.812-2.309 1.101-2.62.29-.311.631-.389.842-.389.21 0 .421.002.604.011.196.01.458-.074.717.548.267.639.914 2.228.993 2.388.079.16.132.347.026.558-.105.21-.157.341-.315.525-.158.184-.332.411-.474.552-.158.158-.323.33-.139.646.184.316.817 1.349 1.753 2.183 1.203 1.072 2.217 1.405 2.533 1.563.316.158.5.132.684-.079.184-.21.789-.92 1.001-1.235.21-.316.421-.263.71-.158.29.105 1.841.868 2.157 1.026.316.158.526.237.605.368.079.132.079.763-.165 1.451z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-bottom-bar">
+      <p>&copy; <span id="current-year">2026</span> BiyeArt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/+2348087188966" id="floating-whatsapp" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg class="floating-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 2c-5.514 0-9.997 4.483-9.997 9.997 0 1.76.459 3.474 1.33 4.988l-1.364 4.985 5.105-1.339c1.464.799 3.118 1.22 4.926 1.22 5.514 0 9.997-4.483 9.997-9.997 0-5.514-4.483-9.997-9.997-9.997zm5.834 14.161c-.244.688-1.428 1.314-1.97 1.368-.492.049-1.129.227-3.666-.82-3.155-1.303-5.17-4.526-5.328-4.737-.156-.21-1.282-1.706-1.282-3.253 0-1.547.812-2.309 1.101-2.62.29-.311.631-.389.842-.389.21 0 .421.002.604.011.196.01.458-.074.717.548.267.639.914 2.228.993 2.388.079.16.132.347.026.558-.105.21-.157.341-.315.525-.158.184-.332.411-.474.552-.158.158-.323.33-.139.646.184.316.817 1.349 1.753 2.183 1.203 1.072 2.217 1.405 2.533 1.563.316.158.5.132.684-.079.184-.21.789-.92 1.001-1.235.21-.316.421-.263.71-.158.29.105 1.841.868 2.157 1.026.316.158.526.237.605.368.079.132.079.763-.165 1.451z"/>
+    </svg>
+  </a>
+  <script src="script.js"></script>
+</body>
+</html>
