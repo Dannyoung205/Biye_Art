@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://biyeart.name.ng/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://biyeart.name.ng/assets/logo.jpg</image:loc>
+      <image:title>BiyeArt — Bespoke Resin Atelier Logo</image:title>
+      <image:caption>Official logo of BiyeArt, handcrafted bespoke resin atelier in Nigeria</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://biyeart.name.ng/assets/Pen_01.jpg</image:loc>
+      <image:title>Custom Gold Leaf Resin Pens</image:title>
+      <image:caption>Handcrafted crystal resin pens with gold leaf flakes by BiyeArt</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://biyeart.name.ng/assets/phone_01.jpg</image:loc>
+      <image:title>Crystal Blue Glitter Resin Phone Stand</image:title>
+      <image:caption>Custom phone display holder with embedded resin glitter</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://biyeart.name.ng/assets/neck_01.jpg</image:loc>
+      <image:title>Interlocking Resin Couple Heart Necklace</image:title>
+      <image:caption>Handcrafted resin wearable jewelry and couple heart pendants</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://biyeart.name.ng/assets/Ring_01.jpg</image:loc>
+      <image:title>Glitter Resin Rings and Bangles</image:title>
+      <image:caption>Hand-poured crystal resin wearable rings</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://biyeart.name.ng/assets/Pen_05.jpeg</image:loc>
+      <image:title>Personalized Resin Jotter, Pen &amp; Phone Pouch Gift Set</image:title>
+      <image:caption>Luxury combo presentation gift box handcrafted in Nigeria</image:caption>
+    </image:image>
+  </url>
+</urlset>

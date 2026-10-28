@@ -267,26 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Light / Dark Mode Theme Toggle Logic (Light Mode Default)
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('biyeart_theme');
-
-  // Default is Light Mode; only activate dark theme if user explicitly saved 'dark'
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-  } else {
-    document.body.classList.remove('dark-theme');
-  }
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-theme');
-      const isDark = document.body.classList.contains('dark-theme');
-      localStorage.setItem('biyeart_theme', isDark ? 'dark' : 'light');
-    });
-  }
-
-  // 9. Dynamic Real-Time Copyright Year Update
+  // 8. Dynamic Real-Time Copyright Year Update
   const yearElement = document.getElementById('current-year');
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();

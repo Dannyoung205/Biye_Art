@@ -1,15 +1,15 @@
 /* ==========================================================================
    BiyeArt — Premium Resin Art Brand
-   Design System & Modern Gallery Light Mode Styling
+   Design System: Luxury Dark Theme (95% Black Palette)
    ========================================================================== */
 
 :root {
-  --bg-color: #FBFBF9;
-  --text-dark: #1A1A1A;
-  --text-muted: #666666;
-  --accent-gold: #D4AF37;
-  --accent-gold-hover: #C5A028;
-  --card-bg: #FFFFFF;
+  --bg-color: #0D0D0D; /* 95% Black */
+  --text-dark: #F5F5F5;
+  --text-muted: #A3A3A3;
+  --card-bg: #141414;
+  --accent-gold: #E5C158;
+  --accent-gold-hover: #f0cc66;
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --transition-fast: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -50,6 +50,15 @@ a {
   transition: color var(--transition-fast);
 }
 
+/* Mobile-First Touch & Interaction Optimizations */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, .cta-button, .category-tab, .hero-cat-chip, .workshop-btn, .submit-btn, .rating-btn, .spotlight-close, .floating-whatsapp-btn {
+  touch-action: manipulation;
+}
+
 /* Typography & Labels */
 .section-label {
   display: inline-block;
@@ -76,10 +85,10 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(251, 251, 249, 0.88);
+  background-color: rgba(13, 13, 13, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: background-color var(--transition-fast);
 }
 
@@ -144,42 +153,6 @@ a {
   width: 100%;
 }
 
-.theme-toggle-btn {
-  background: rgba(26, 26, 26, 0.05);
-  border: 1px solid rgba(26, 26, 26, 0.1);
-  color: var(--text-dark);
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  transition: all var(--transition-fast);
-}
-
-.theme-toggle-btn:hover {
-  background-color: var(--accent-gold);
-  color: #1A1A1A;
-  border-color: var(--accent-gold);
-  transform: scale(1.08);
-}
-
-.theme-icon {
-  width: 18px;
-  height: 18px;
-  transition: transform var(--transition-fast);
-}
-
-.sun-icon {
-  display: none;
-}
-
-.moon-icon {
-  display: block;
-}
-
 /* ==========================================================================
    Hero Section (with Dynamic 3D Resin Video Carousel Background)
    ========================================================================== */
@@ -231,12 +204,8 @@ a {
   position: absolute;
   inset: 0;
   z-index: 3;
-  background: radial-gradient(circle at 35% 45%, rgba(251, 251, 249, 0.45) 0%, rgba(251, 251, 249, 0.82) 100%);
-  pointer-events: none;
-}
-
-body.dark-theme .hero-video-overlay {
   background: radial-gradient(circle at 35% 45%, rgba(13, 13, 13, 0.50) 0%, rgba(13, 13, 13, 0.88) 100%);
+  pointer-events: none;
 }
 
 .hero-container {
@@ -254,22 +223,16 @@ body.dark-theme .hero-video-overlay {
 .hero-glass-card {
   max-width: 720px;
   width: 100%;
-  background: rgba(251, 251, 249, 0.48);
+  background: rgba(13, 13, 13, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 175, 55, 0.24);
+  border: 1px solid rgba(212, 175, 55, 0.32);
   border-radius: 20px;
   padding: 3rem 2.75rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.45) inset;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
   position: relative;
   z-index: 10;
   transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-body.dark-theme .hero-glass-card {
-  background: rgba(13, 13, 13, 0.55);
-  border-color: rgba(212, 175, 55, 0.32);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
 }
 
 /* Left: Narrative, CTAs & Credibility */
@@ -338,8 +301,8 @@ body.dark-theme .hero-glass-card {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: var(--text-dark);
-  color: #FBFBF9;
+  background-color: #F5F5F5;
+  color: #0D0D0D;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -347,14 +310,14 @@ body.dark-theme .hero-glass-card {
   padding: 1rem 2.25rem;
   border-radius: 6px;
   transition: all var(--transition-smooth);
-  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .primary-hero-btn:hover {
   background-color: var(--accent-gold);
-  color: #1A1A1A;
+  color: #0D0D0D;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 25px rgba(229, 193, 88, 0.35);
 }
 
 .cta-arrow-icon {
@@ -372,8 +335,8 @@ body.dark-theme .hero-glass-card {
   align-items: center;
   gap: 0.65rem;
   background: transparent;
-  color: var(--text-dark);
-  border: 1px solid rgba(26, 26, 26, 0.2);
+  color: #F5F5F5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -392,8 +355,8 @@ body.dark-theme .hero-glass-card {
 
 .secondary-cta-button:hover {
   border-color: #25D366;
-  background-color: rgba(37, 211, 102, 0.06);
-  color: #1A1A1A;
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 
@@ -413,10 +376,10 @@ body.dark-theme .hero-glass-card {
   gap: 1rem;
   flex-wrap: wrap;
   padding: 1.25rem 1.75rem;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(20, 20, 20, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(26, 26, 26, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
 }
 
@@ -439,21 +402,21 @@ body.dark-theme .hero-glass-card {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(26, 26, 26, 0.03);
-  border: 1px solid rgba(26, 26, 26, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 0.45rem 1rem;
   font-family: var(--font-main);
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #F5F5F5;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .hero-cat-chip:hover {
-  background: rgba(212, 175, 55, 0.15);
-  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(229, 193, 88, 0.2);
+  border-color: var(--accent-gold);
   transform: translateY(-1px);
 }
 
@@ -470,19 +433,13 @@ body.dark-theme .hero-glass-card {
   position: relative;
   text-align: center;
   padding: 4.5rem 3.5rem;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(22, 22, 22, 0.65);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 175, 55, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.03);
-  transition: all var(--transition-smooth);
-}
-
-body.dark-theme .about-manifesto-card {
-  background: rgba(22, 22, 22, 0.65);
-  border-color: rgba(212, 175, 55, 0.2);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-smooth);
 }
 
 .about-manifesto-card .section-label {
@@ -519,16 +476,12 @@ body.dark-theme .about-manifesto-card {
 
 .about-manifesto-text {
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  color: var(--text-dark);
+  color: #E6E6E3;
   line-height: 2;
   font-weight: 300;
   max-width: 820px;
   margin: 0 auto 2.5rem;
   letter-spacing: 0.01em;
-}
-
-body.dark-theme .about-manifesto-text {
-  color: #E6E6E3;
 }
 
 .manifesto-attribution {
@@ -600,28 +553,28 @@ body.dark-theme .about-manifesto-text {
   gap: 0.5rem;
   padding: 0.65rem 1.25rem;
   border-radius: 40px;
-  background-color: rgba(26, 26, 26, 0.04);
-  border: 1px solid rgba(26, 26, 26, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   font-family: var(--font-main);
   font-size: 0.84rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: #F5F5F5;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .category-tab:hover {
-  background-color: rgba(212, 175, 55, 0.12);
-  border-color: rgba(212, 175, 55, 0.3);
-  color: var(--text-dark);
+  background-color: rgba(229, 193, 88, 0.18);
+  border-color: rgba(229, 193, 88, 0.35);
+  color: #F5F5F5;
   transform: translateY(-1px);
 }
 
 .category-tab.active {
-  background-color: var(--text-dark);
-  color: #FBFBF9;
-  border-color: var(--text-dark);
-  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.15);
+  background-color: #F5F5F5;
+  color: #0D0D0D;
+  border-color: #F5F5F5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
 .tab-badge {
@@ -634,14 +587,14 @@ body.dark-theme .about-manifesto-text {
   border-radius: 10px;
   font-size: 0.7rem;
   font-weight: 700;
-  background-color: rgba(212, 175, 55, 0.2);
+  background-color: rgba(229, 193, 88, 0.2);
   color: var(--accent-gold);
   transition: all var(--transition-fast);
 }
 
 .category-tab.active .tab-badge {
   background-color: var(--accent-gold);
-  color: #1A1A1A;
+  color: #0D0D0D;
 }
 
 /* Category Group Block */
@@ -657,7 +610,7 @@ body.dark-theme .about-manifesto-text {
 .category-group-header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -673,8 +626,8 @@ body.dark-theme .about-manifesto-text {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #1A1A1A;
-  background-color: rgba(212, 175, 55, 0.25);
+  color: #0D0D0D;
+  background-color: var(--accent-gold);
   padding: 0.2rem 0.55rem;
   border-radius: 12px;
 }
@@ -704,7 +657,8 @@ body.dark-theme .about-manifesto-text {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  background-color: #F5F5F2;
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   cursor: pointer;
   aspect-ratio: 4 / 3;
   width: 100%;
@@ -845,13 +799,13 @@ body.dark-theme .about-manifesto-text {
   display: flex;
   gap: 10px;
   z-index: 10;
-  background: rgba(251, 251, 249, 0.88);
+  background: rgba(20, 20, 20, 0.90);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 8px 14px;
   border-radius: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   opacity: 0.9;
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
@@ -869,7 +823,7 @@ body.dark-theme .about-manifesto-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-dark);
+  color: #F5F5F5;
   transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -983,10 +937,10 @@ body.dark-theme .about-manifesto-text {
    Workshops Section (Modern Gallery Aesthetic)
    ========================================================================== */
 .workshops-section {
-  background-color: var(--bg-color);
+  background-color: #0A0A0A;
   color: var(--text-dark);
   padding: 6.5rem 2.5rem 7.5rem;
-  border-top: 1px solid rgba(26, 26, 26, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
 }
 
@@ -1014,11 +968,11 @@ body.dark-theme .about-manifesto-text {
 }
 
 .workshop-card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(26, 26, 26, 0.08);
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 2.75rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1027,8 +981,8 @@ body.dark-theme .about-manifesto-text {
 
 .workshop-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: rgba(229, 193, 88, 0.4);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.8);
 }
 
 .workshop-card-top {
@@ -1044,7 +998,7 @@ body.dark-theme .about-manifesto-text {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent-gold);
-  background-color: rgba(212, 175, 55, 0.12);
+  background-color: rgba(229, 193, 88, 0.15);
   padding: 0.3rem 0.85rem;
   border-radius: 20px;
   margin-bottom: 1.25rem;
@@ -1079,7 +1033,7 @@ body.dark-theme .about-manifesto-text {
   align-items: flex-start;
   gap: 0.75rem;
   font-size: 0.9rem;
-  color: var(--text-dark);
+  color: #E2E8F0;
   line-height: 1.5;
 }
 
@@ -1103,7 +1057,7 @@ body.dark-theme .about-manifesto-text {
   gap: 0.65rem;
   width: 100%;
   background-color: var(--accent-gold);
-  color: #1A1A1A;
+  color: #0D0D0D;
   font-family: var(--font-main);
   font-size: 0.92rem;
   font-weight: 600;
@@ -1114,15 +1068,15 @@ body.dark-theme .about-manifesto-text {
   border: none;
   cursor: pointer;
   transition: all var(--transition-smooth);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 16px rgba(229, 193, 88, 0.25);
   text-decoration: none;
 }
 
 .workshop-btn:hover {
-  background-color: var(--accent-gold-hover);
-  color: #1A1A1A;
+  background-color: #f0cc66;
+  color: #0D0D0D;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 28px rgba(229, 193, 88, 0.45);
 }
 
 .workshop-btn-icon {
@@ -1139,10 +1093,10 @@ body.dark-theme .about-manifesto-text {
    Contact Section (Integrated Get In Touch Page)
    ========================================================================== */
 .contact-section {
-  background-color: var(--bg-color);
+  background-color: #0A0A0A;
   color: var(--text-dark);
   padding: 6rem 2.5rem 7rem;
-  border-top: 1px solid rgba(26, 26, 26, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-header {
@@ -1177,11 +1131,11 @@ body.dark-theme .about-manifesto-text {
 }
 
 .contact-card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(26, 26, 26, 0.08);
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 2.75rem 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
 }
@@ -1219,31 +1173,31 @@ body.dark-theme .about-manifesto-text {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: #E2E8F0;
 }
 
 .form-group input,
 .form-group textarea {
-  background-color: #FBFBF9;
-  border: 1px solid rgba(26, 26, 26, 0.12);
+  background-color: #1c1c1c;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 6px;
   padding: 0.85rem 1rem;
   font-family: var(--font-main);
   font-size: 1rem; /* 16px minimum prevents iOS Safari auto-zoom */
-  color: var(--text-dark);
+  color: #FFFFFF;
   outline: none;
   transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #999999;
+  color: #888888;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent-gold);
-  background-color: #FFFFFF;
+  background-color: #242424;
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
@@ -1253,8 +1207,8 @@ body.dark-theme .about-manifesto-text {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  background-color: var(--text-dark);
-  color: #FBFBF9;
+  background-color: #F5F5F5;
+  color: #0D0D0D;
   font-family: var(--font-main);
   font-size: 0.95rem;
   font-weight: 600;
@@ -1268,7 +1222,7 @@ body.dark-theme .about-manifesto-text {
 
 .submit-btn:hover {
   background-color: var(--accent-gold);
-  color: #1A1A1A;
+  color: #0D0D0D;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
 }
@@ -1329,8 +1283,8 @@ body.dark-theme .about-manifesto-text {
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background-color: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  background-color: rgba(229, 193, 88, 0.15);
+  border: 1px solid rgba(229, 193, 88, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1386,12 +1340,12 @@ body.dark-theme .about-manifesto-text {
   width: 31px;
   height: 31px;
   border-radius: 50%;
-  background-color: rgba(26, 26, 26, 0.04);
-  border: 1px solid rgba(26, 26, 26, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-dark);
+  color: #F5F5F5;
   transition: all var(--transition-fast);
 }
 
@@ -1402,18 +1356,18 @@ body.dark-theme .about-manifesto-text {
 
 .contact-social-link:hover {
   background-color: var(--accent-gold);
-  color: #1A1A1A;
+  color: #0D0D0D;
   border-color: var(--accent-gold);
   transform: translateY(-2px);
 }
 
 /* ==========================================================================
-   Redesigned 4-Column Footer Section (Default Light Palette)
+   Redesigned 4-Column Footer Section (Luxury Dark Palette)
    ========================================================================== */
 .footer-section {
-  background-color: #F6F6F2;
+  background-color: #080808;
   color: var(--text-dark);
-  border-top: 1px solid rgba(26, 26, 26, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 5rem 2.5rem 1rem;
 }
 
@@ -1468,12 +1422,12 @@ body.dark-theme .about-manifesto-text {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: rgba(26, 26, 26, 0.04);
-  border: 1px solid rgba(26, 26, 26, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-dark);
+  color: #F5F5F5;
   transition: all var(--transition-fast);
 }
 
@@ -1484,7 +1438,7 @@ body.dark-theme .about-manifesto-text {
 
 .footer-col .social-icon-link:hover {
   background-color: var(--accent-gold);
-  color: #1A1A1A;
+  color: #0D0D0D;
   border-color: var(--accent-gold);
   transform: translateY(-2px);
 }
@@ -1552,7 +1506,7 @@ body.dark-theme .about-manifesto-text {
   transition: all var(--transition-smooth);
   width: auto;
   align-self: flex-start;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
 }
 
 .whatsapp-btn .btn-icon,
@@ -1570,17 +1524,17 @@ body.dark-theme .about-manifesto-text {
 
 .whatsapp-btn:hover,
 .inline-whatsapp-btn:hover {
-  background-color: #20bd5a;
+  background-color: #20BD5A;
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
 }
 
 .footer-bottom-bar {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 0.8rem;
-  border-top: 1px solid rgba(26, 26, 26, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
   font-size: 0.82rem;
   color: var(--text-muted);
@@ -1592,7 +1546,9 @@ body.dark-theme .about-manifesto-text {
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 28px;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
   right: 28px;
+  right: calc(28px + env(safe-area-inset-right, 0px));
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -1754,7 +1710,10 @@ body.dark-theme .about-manifesto-text {
 
   .nav-links a {
     font-size: 0.75rem;
-    padding: 0.2rem 0;
+    padding: 0.35rem 0.15rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
   }
 
   .hero-section {
@@ -1945,7 +1904,9 @@ body.dark-theme .about-manifesto-text {
 
   .floating-whatsapp-btn {
     bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
     right: 20px;
+    right: calc(20px + env(safe-area-inset-right, 0px));
     width: 52px;
     height: 52px;
   }
@@ -1967,23 +1928,16 @@ body.dark-theme .about-manifesto-text {
   }
 
   .nav-links {
-    gap: 0.45rem;
+    gap: 0.75rem;
   }
 
   .nav-links a {
-    font-size: 0.65rem;
-    letter-spacing: 0.02em;
-  }
-
-  .theme-toggle-btn {
-    width: 32px;
-    height: 32px;
-    margin-left: 0.25rem;
-  }
-
-  .theme-toggle-btn .theme-icon {
-    width: 15px;
-    height: 15px;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.12rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
   }
 
   .hero-section {
@@ -2080,23 +2034,16 @@ body.dark-theme .about-manifesto-text {
   }
 
   .nav-links {
-    gap: 0.35rem;
+    gap: 0.55rem;
   }
 
   .nav-links a {
-    font-size: 0.6rem;
-    letter-spacing: 0;
-  }
-
-  .theme-toggle-btn {
-    width: 28px;
-    height: 28px;
-    margin-left: 0.15rem;
-  }
-
-  .theme-toggle-btn .theme-icon {
-    width: 13px;
-    height: 13px;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.08rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
   }
 
   .hero-headline {
@@ -2153,7 +2100,9 @@ body.dark-theme .about-manifesto-text {
 
   .floating-whatsapp-btn {
     bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
     right: 16px;
+    right: calc(16px + env(safe-area-inset-right, 0px));
     width: 48px;
     height: 48px;
   }
@@ -2175,268 +2124,12 @@ body.dark-theme .about-manifesto-text {
 }
 
 /* ==========================================================================
-   Dark Theme System (95% Black Palette)
+   End of Stylesheet — Luxury Dark Theme System (95% Black Palette)
    ========================================================================== */
 body.dark-theme {
-  --bg-color: #0D0D0D; /* 95% Black */
-  --text-dark: #F5F5F5;
-  --text-muted: #A3A3A3;
-  --card-bg: #141414;
-  --accent-gold: #E5C158;
   background-color: #0D0D0D;
   color: #F5F5F5;
 }
 
-/* Navbar in Dark Mode */
-body.dark-theme .navbar {
-  background-color: rgba(13, 13, 13, 0.90);
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-theme .theme-toggle-btn {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: #F5F5F5;
-}
-
-body.dark-theme .theme-toggle-btn:hover {
-  background-color: var(--accent-gold);
-  color: #0D0D0D;
-  border-color: var(--accent-gold);
-}
-
-body.dark-theme .sun-icon {
-  display: block;
-}
-
-body.dark-theme .moon-icon {
-  display: none;
-}
-
-/* Hero & 3D Canvas in Dark Mode */
-body.dark-theme .hero-section {
-  background: radial-gradient(circle at 70% 40%, rgba(229, 193, 88, 0.09) 0%, transparent 60%),
-              radial-gradient(circle at 20% 70%, rgba(229, 193, 88, 0.05) 0%, transparent 50%);
-}
-
-body.dark-theme .primary-hero-btn {
-  background-color: #F5F5F5;
-  color: #0D0D0D;
-}
-
-body.dark-theme .primary-hero-btn:hover {
-  background-color: var(--accent-gold);
-  color: #0D0D0D;
-}
-
-body.dark-theme .secondary-cta-button {
-  color: #F5F5F5;
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-body.dark-theme .secondary-cta-button:hover {
-  border-color: #25D366;
-  background-color: rgba(37, 211, 102, 0.1);
-  color: #FFFFFF;
-}
-
-
-
-body.dark-theme .hero-category-nav {
-  background: rgba(20, 20, 20, 0.85);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-theme .hero-cat-chip {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #F5F5F5;
-}
-
-body.dark-theme .hero-cat-chip:hover {
-  background: rgba(229, 193, 88, 0.2);
-  border-color: var(--accent-gold);
-}
-
-/* About Section in Dark Mode */
-body.dark-theme .image-frame {
-  background-color: #141414;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-}
-
-/* Category Filter Bar in Dark Mode */
-body.dark-theme .category-tab {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.10);
-  color: #F5F5F5;
-}
-
-body.dark-theme .category-tab:hover {
-  background-color: rgba(229, 193, 88, 0.18);
-  border-color: rgba(229, 193, 88, 0.35);
-}
-
-body.dark-theme .category-tab.active {
-  background-color: #F5F5F5;
-  color: #0D0D0D;
-  border-color: #F5F5F5;
-}
-
-body.dark-theme .category-group-header {
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-theme .category-pill-num {
-  color: #0D0D0D;
-  background-color: var(--accent-gold);
-}
-
-/* Gallery Cards in Dark Mode */
-body.dark-theme .gallery-card {
-  background-color: #141414;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-body.dark-theme .rating-overlay {
-  background: rgba(20, 20, 20, 0.90);
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-body.dark-theme .rating-btn {
-  color: #F5F5F5;
-}
-
-/* Workshops Section in Dark Mode */
-body.dark-theme .workshops-section {
-  background-color: #0A0A0A;
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-theme .workshop-card {
-  background-color: #141414;
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
-}
-
-body.dark-theme .workshop-card:hover {
-  border-color: rgba(229, 193, 88, 0.4);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.8);
-}
-
-body.dark-theme .workshop-tag {
-  background-color: rgba(229, 193, 88, 0.15);
-  color: var(--accent-gold);
-}
-
-body.dark-theme .workshop-highlights li {
-  color: #E2E8F0;
-}
-
-body.dark-theme .workshop-btn {
-  background-color: var(--accent-gold);
-  color: #0D0D0D;
-  box-shadow: 0 4px 16px rgba(229, 193, 88, 0.25);
-}
-
-body.dark-theme .workshop-btn:hover {
-  background-color: #f0cc66;
-  color: #0D0D0D;
-  box-shadow: 0 8px 28px rgba(229, 193, 88, 0.45);
-}
-
-/* Contact Section in Dark Mode */
-body.dark-theme .contact-section {
-  background-color: #0A0A0A;
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-theme .contact-card {
-  background-color: #141414;
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
-}
-
-body.dark-theme .form-group label {
-  color: #E2E8F0;
-}
-
-body.dark-theme .form-group input,
-body.dark-theme .form-group textarea {
-  background-color: #1c1c1c;
-  border-color: rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
-}
-
-body.dark-theme .form-group input::placeholder,
-body.dark-theme .form-group textarea::placeholder {
-  color: #888888;
-}
-
-body.dark-theme .form-group input:focus,
-body.dark-theme .form-group textarea:focus {
-  border-color: var(--accent-gold);
-  background-color: #242424;
-}
-
-body.dark-theme .submit-btn {
-  background-color: #F5F5F5;
-  color: #0D0D0D;
-}
-
-body.dark-theme .submit-btn:hover {
-  background-color: var(--accent-gold);
-  color: #0D0D0D;
-}
-
-body.dark-theme .info-icon-box {
-  background-color: rgba(229, 193, 88, 0.15);
-  border-color: rgba(229, 193, 88, 0.3);
-}
-
-body.dark-theme .contact-social-link {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.10);
-  color: #F5F5F5;
-}
-
-body.dark-theme .contact-social-link:hover {
-  background-color: var(--accent-gold);
-  color: #0D0D0D;
-}
-
-/* Footer Section in Dark Mode */
-body.dark-theme .footer-section {
-  background-color: #080808;
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
-
-body.dark-theme .footer-col .social-icon-link {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.10);
-  color: #F5F5F5;
-}
-
-body.dark-theme .footer-col .social-icon-link:hover {
-  background-color: var(--accent-gold);
-  color: #0D0D0D;
-}
-
-body.dark-theme .inline-whatsapp-btn,
-body.dark-theme .whatsapp-btn {
-  background-color: #25D366;
-  color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-}
-
-body.dark-theme .inline-whatsapp-btn:hover,
-body.dark-theme .whatsapp-btn:hover {
-  background-color: #20BD5A;
-  color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
-}
-
-body.dark-theme .footer-bottom-bar {
-  border-top-color: rgba(255, 255, 255, 0.08);
-}
 
 

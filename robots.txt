@@ -1,0 +1,8 @@
+# robots.txt for BiyeArt
+# Website: https://biyeart.name.ng/
+
+User-agent: *
+Allow: /
+
+# XML Sitemap Location
+Sitemap: https://biyeart.name.ng/sitemap.xml
